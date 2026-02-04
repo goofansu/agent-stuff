@@ -1,8 +1,8 @@
 # agent-stuff
 
-My agent stuff.
+This repository stores customizations for coding agents. Files are copied or symlinked into agent directories. For example, `~/.pi/agent/extensions` a symlink to the pi-extensions directory in this repository.
 
-## Pi extensions
+## pi extensions
 
 The following are my custom extensions for [pi coding agent](https://github.com/badlogic/pi-mono/blob/main/packages/coding-agent/):
 
