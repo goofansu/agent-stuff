@@ -868,7 +868,7 @@ const showFileSelector = async (
 		const listContainer = new Container();
 		container.addChild(listContainer);
 		container.addChild(
-			new Text(theme.fg("dim", "Type to filter • enter to select • ctrl+shift+d diff • esc to cancel"), 0, 0),
+			new Text(theme.fg("dim", "Type to filter • enter to select • esc to cancel"), 0, 0),
 		);
 		container.addChild(new DynamicBorder((str) => theme.fg("accent", str)));
 
@@ -922,21 +922,6 @@ const showFileSelector = async (
 				container.invalidate();
 			},
 			handleInput(data: string) {
-				if (matchesKey(data, "ctrl+shift+d")) {
-					const selected = selectList?.getSelectedItem();
-					if (selected) {
-						const file = files.find((entry) => entry.canonicalPath === selected.value);
-						const canDiff = file?.isTracked && !file.isDirectory && Boolean(gitRoot);
-						if (!canDiff) {
-							ctx.ui.notify("Diff is only available for tracked files", "warning");
-							return;
-						}
-						quickAction = "diff";
-						done(selected.value as string);
-						return;
-					}
-				}
-
 				const kb = getEditorKeybindings();
 				if (
 					kb.matches(data, "selectUp") ||
