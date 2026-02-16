@@ -6,5 +6,5 @@ This repository stores customizations for coding agents. Files are copied or sym
 
 The following are my custom extensions for [pi coding agent](https://github.com/badlogic/pi-mono/blob/main/packages/coding-agent/):
 
-* [`snippets.ts`](pi/extensions/snippets.ts) - Quickly view, copy, or ask for an explanation of code snippets from the last assistant message.
+* [`snippets.ts`](pi/extensions/snippets.ts) - Code snippet viewer for the last assistant message. Lists all markdown code blocks and lets you copy them to clipboard or ask for an explanation with custom instructions. Invokable via `/snippets`.
 * [`librarian.ts`](pi/extensions/librarian.ts) - Cross-repository code research subagent. Spawns an isolated `pi` process to search and read code across GitHub repositories using `gh` CLI. Invokable as a tool by the agent or directly via `/librarian`.
