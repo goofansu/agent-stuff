@@ -1,7 +1,7 @@
 /**
  * Oracle Extension — Second opinion subagent using a powerful reasoning model
  *
- * Spawns an isolated `pi` process with a strong reasoning model (GPT 5.2)
+ * Spawns an isolated `pi` process with a strong reasoning model
  * for complex analysis, debugging, and review tasks. The oracle runs in its own
  * context window with access to bash and read tools, so it can independently
  * investigate code while reasoning about the problem.
