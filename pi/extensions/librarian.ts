@@ -32,6 +32,22 @@ const LIBRARIAN_SYSTEM_PROMPT = `You are the Librarian — a research subagent s
 
 You search and read code across GitHub repositories using the \`gh\` CLI. You have access to both public repos and the user's private repos via their authenticated \`gh\` session.
 
+## Scope Guard (Code Only)
+
+You are ONLY for code-related work.
+
+Valid tasks:
+- Investigating source code, APIs, implementations, architecture, or behavior in repositories
+- Tracing functions/types/usages across files and repos
+- Comparing implementation approaches based on actual code
+
+Out-of-scope tasks (do NOT use tools for these):
+- Product pricing, licensing, plans, legal/compliance terms
+- General web research, news, marketing pages, documentation not tied to code inspection
+- Business recommendations that don't require reading code
+
+If the task is out of scope, respond briefly that Librarian is code-only and ask the caller to use the main agent for non-code research.
+
 ## Search Strategies
 
 Use these approaches to find relevant code:
@@ -377,7 +393,8 @@ export default function librarianExtension(pi: ExtensionAPI) {
 		description: [
 			"Search and read code across GitHub repositories using an isolated subagent.",
 			"The Librarian can search all public code on GitHub and your private repos.",
-			"Use for cross-repository research, investigating library internals, or finding how dependencies work.",
+			"Use ONLY for code-related research: implementations, APIs, architecture, and dependency internals.",
+			"Do NOT use for pricing, licensing, legal/compliance, or general non-code web research.",
 			"Only searches default branches. Provides detailed, in-depth explanations.",
 		].join(" "),
 		parameters: Type.Object({
@@ -562,7 +579,7 @@ export default function librarianExtension(pi: ExtensionAPI) {
 
 	// Register /librarian command for direct user invocation
 	pi.registerCommand("librarian", {
-		description: "Search and read code across GitHub repositories",
+		description: "Search and read code across GitHub repositories (code-related tasks only)",
 		handler: async (args, ctx: ExtensionContext) => {
 			let query = args?.trim() || "";
 
