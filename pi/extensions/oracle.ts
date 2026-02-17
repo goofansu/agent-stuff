@@ -204,7 +204,7 @@ function getFinalOutput(messages: any[]): string {
   return "";
 }
 
-const PREFERRED_PROVIDER = "opencode";
+const PREFERRED_PROVIDER = "openai-codex";
 const PREFERRED_MODEL_ID = "gpt-5.2";
 const PREFERRED_MODEL = `${PREFERRED_PROVIDER}/${PREFERRED_MODEL_ID}`;
 
