@@ -262,7 +262,18 @@ async function runLibrarian(
 	onUpdate?: (partial: SubagentResult, messages: any[]) => void,
 	model?: string,
 ): Promise<SubagentResult> {
-	const args: string[] = ["--mode", "json", "-p", "--no-session", "--tools", "bash,read"];
+	const args: string[] = [
+		"--mode",
+		"json",
+		"-p",
+		"--no-session",
+		"--no-extensions",
+		"--no-skills",
+		"--no-prompt-templates",
+		"--no-themes",
+		"--tools",
+		"bash,read",
+	];
 
 	if (model) args.push("--model", model);
 

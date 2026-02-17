@@ -220,6 +220,10 @@ async function runOracle(
     "json",
     "-p",
     "--no-session",
+    "--no-extensions",
+    "--no-skills",
+    "--no-prompt-templates",
+    "--no-themes",
     "--tools",
     "bash,read,grep,glob",
   ];
