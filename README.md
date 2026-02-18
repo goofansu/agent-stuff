@@ -2,11 +2,12 @@
 
 This repository stores customizations for the [pi coding agent](https://github.com/badlogic/pi-mono/blob/main/packages/coding-agent/).
 
-Files and directories are symlinked into `~/.pi/agent/`:
+## Install
 
-- [`extensions`](extensions) → `~/.pi/agent/extensions/`
-- [`skills`](skills) → `~/.pi/agent/skills/`
-- [`keybindings.json`](keybindings.json) → `~/.pi/agent/keybindings.json`
+```bash
+gh repo clone goofansu/pi-stuff ~/code/pi-stuff
+pi install ~/code/pi-stuff
+```
 
 ## Extensions
 
