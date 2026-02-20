@@ -13,12 +13,13 @@ All extension files are in the [`extensions`](extensions) directory:
 - [`librarian.ts`](extensions/librarian.ts) - Cross-repository code research subagent.
 - [`oracle.ts`](extensions/oracle.ts) - Second opinion subagent for complex analysis and debugging tasks.
 - [`snippets.ts`](extensions/snippets.ts) - Lists markdown code blocks from the last assistant message for selection.
+- [`files.ts`](extensions/files.ts) - `/files` command (also `ctrl+shift+o`) browses git-tracked and session-referenced files with quick actions: reveal, open, edit, or diff. `ctrl+shift+f` reveals the latest session file reference in Finder; `ctrl+shift+r` opens it in Quick Look.
 
 ## Skills
 
 All skill files are in the [`skills`](skills) directory:
 
 - [`commit`](skills/commit) - For creating git commits using concise Conventional Commits-style subjects. ([source](https://github.com/mitsuhiko/agent-stuff/tree/main/skills/commit))
-- [`gh-issue-sync`](skills/gh-issue-sync) - For using `gh-issue-sync` command to manage GitHub issues. ([source](https://github.com/mitsuhiko/gh-issue-sync/blob/main/skill/SKILL.md))
-- [`mlwcli`](skills/mlwcli) - For using `mlwcli` command to manage Miniflux, Linkding, and Wallabag. ([source](https://github.com/goofansu/mlwcli/blob/main/skill/SKILL.md))
+- [`jira`](skills/jira) - For interacting with Atlassian Jira via `acli` (view, create, edit, transition issues, JQL search, etc.).
+- [`note`](skills/note) - For creating and managing Denote notes in Emacs via `emacsclient`.
 - [`web-browser`](skills/web-browser) - For using Puppeteer in a Node environment to browse the web. ([source](https://github.com/mitsuhiko/agent-stuff/tree/main/skills/web-browser))
