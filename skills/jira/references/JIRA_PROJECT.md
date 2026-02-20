@@ -2,6 +2,16 @@
 
 Jira project commands.
 
+## Contents
+
+- [archive](#archive)
+- [create](#create)
+- [delete](#delete)
+- [list](#list)
+- [restore](#restore)
+- [update](#update)
+- [view](#view)
+
 ## archive
 
 Archive a Jira project.

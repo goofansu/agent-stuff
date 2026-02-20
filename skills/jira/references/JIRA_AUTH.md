@@ -2,6 +2,11 @@
 
 Authenticate to use Atlassian CLI with Jira.
 
+> **Interactive vs non-interactive:**
+> - `auth login --web` and `auth switch` (no flags) require a browser/TTY — ask the user to run these in their terminal.
+> - `auth login --site --email --token` (token piped via stdin) is non-interactive and can be run by the agent.
+> - Use `auth status` to check the current session before attempting auth.
+
 ## login
 
 Authenticate with an Atlassian host.

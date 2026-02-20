@@ -2,6 +2,32 @@
 
 Jira work item commands.
 
+## Contents
+
+- [archive](#archive)
+- [assign](#assign)
+- [attachment delete](#attachment-delete)
+- [attachment list](#attachment-list)
+- [clone](#clone)
+- [comment create](#comment-create)
+- [comment delete](#comment-delete)
+- [comment list](#comment-list)
+- [comment update](#comment-update)
+- [comment visibility](#comment-visibility)
+- [create](#create)
+- [create-bulk](#create-bulk)
+- [delete](#delete)
+- [edit](#edit)
+- [link create](#link-create)
+- [link delete](#link-delete)
+- [link list](#link-list)
+- [link type](#link-type)
+- [search](#search)
+- [transition](#transition)
+- [unarchive](#unarchive)
+- [view](#view)
+- [watcher remove](#watcher-remove)
+
 ## archive
 
 Archive one or more work items.
