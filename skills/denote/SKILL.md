@@ -133,7 +133,7 @@ emacsclient -s gui -e '(let ((denote-rename-confirmations nil) (denote-save-buff
 - Keywords are **always a list**, even for a single keyword: `(list "work")`.
 - To inspect the current `denote-directory`:
   ```bash
-  emacsclient -s gui -e "denote-directory"
+  emacsclient -s gui -e "(denote-directory)"
   ```
 - To list all known keywords (user-defined + inferred from existing notes):
   ```bash
