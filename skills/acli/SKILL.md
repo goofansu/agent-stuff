@@ -22,15 +22,25 @@ If the command is not found, stop and tell the user:
 To view a Jira issue by its ID:
 
 ```bash
-acli jira workitem view <ISSUE_ID>
+acli jira workitem view [key] [flags]
 ```
 
-**Example:**
+**Examples:**
 ```bash
-acli jira workitem view OA-27831
+# View work item with work item keys
+$ acli jira workitem view KEY-123
+
+# View work item by reading work item keys from a JSON file
+$ acli jira workitem view KEY-123 --json
+
+# View work item with work item keys and a list of field to return
+$ acli jira workitem view KEY-123 --fields summary,comment
+
+# View work item with work item keys and view in a web browser
+$ acli jira workitem view KEY-123 --web
 ```
 
-This returns the issue's key, type, summary, status, assignee, and description.
+By default returns: key, issuetype, summary, status, assignee, description.
 
 ## Notes
 
