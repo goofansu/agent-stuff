@@ -8,7 +8,7 @@ description: >
   files stored in a structured directory with filename-encoded metadata.
 ---
 
-# Denote Skill
+# Note Skill
 
 Create and manage [Denote](https://protesilaos.com/emacs/denote) notes by sending commands to a running Emacs GUI server via `emacsclient -s gui`.
 

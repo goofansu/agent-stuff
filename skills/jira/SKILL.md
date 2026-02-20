@@ -9,6 +9,8 @@ description: >
   with a Jira instance.
 ---
 
+# Jira Skill
+
 Use `acli` to interact with Atlassian Jira from the command line.
 
 ## Prerequisites
