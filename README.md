@@ -8,7 +8,7 @@ All extension files are in the [`extensions`](extensions) directory:
 
 - [`answer.ts`](extensions/answer.ts) - Custom interactive TUI for answering questions. ([source](https://github.com/mitsuhiko/agent-stuff/blob/main/pi-extensions/answer.ts))
 - [`context.ts`](extensions/context.ts) - Small TUI view showing what's loaded and available. ([source](https://github.com/mitsuhiko/agent-stuff/blob/main/pi-extensions/context.ts))
-- [`files.ts`](extensions/files.ts) - `/files` command (also `ctrl+shift+o`) browses git-tracked and session-referenced files with quick actions: reveal, open, edit, or diff. `ctrl+shift+f` reveals the latest session file reference in Finder; `ctrl+shift+r` opens it in Quick Look.
+- [`files.ts`](extensions/files.ts) - Browse and act on git-tracked and session-referenced files (reveal, open, edit, diff).
 - [`librarian.ts`](extensions/librarian.ts) - Cross-repository code research subagent.
 - [`notify.ts`](extensions/notify.ts) - Sends a native desktop notification when the agent finishes and is waiting for input. ([source](https://github.com/mitsuhiko/agent-stuff/blob/main/pi-extensions/notify.ts))
 - [`oracle.ts`](extensions/oracle.ts) - Second opinion subagent for complex analysis and debugging tasks.
