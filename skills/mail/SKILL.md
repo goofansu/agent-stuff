@@ -17,7 +17,16 @@ Use `notmuch` to search, read, tag, and count emails. Run `notmuch help <command
 # Search (threads by default)
 notmuch search tag:inbox and tag:unread
 notmuch search path:Work/** and tag:unread
-notmuch search from:alice@example.com date:"1 week ago"..
+notmuch search from:alice@example.com
+
+# Search work emails from the last 7 days
+notmuch search date:7d.. path:Work/**
+
+# Date syntax notes:
+# - Use underscores for spaces: date:1_week_ago.. (spaces cause a parse error)
+# - date:7d.. = exactly 7 days ago
+# - date:1_week_ago.. / date:this_week.. = start of last/current calendar week (not the same as 7d)
+# - Open-ended ranges: date:<since>.. or date:..<until>
 
 # Read a thread
 notmuch show thread:<thread-id>
