@@ -1,7 +1,6 @@
-CURRENT_DIR := $(abspath $(CURDIR))
-
 install:
-	pi install $(CURRENT_DIR)
+	pi install .
+	cp keybindings.json ~/.pi/agent/keybindings.json
 
 add-skills:
 	npx skills add anthropics/skills -s skill-creator -g -a codex -y
