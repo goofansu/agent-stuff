@@ -21,9 +21,4 @@ Local skill files are in the [`skills`](skills) directory:
 - [`jira`](skills/jira) - For interacting with Atlassian Jira via `acli` (view, create, edit, transition issues, JQL search, etc.).
 - [`note`](skills/note) - For creating and managing Denote notes in Emacs via `emacsclient`.
 
-The following skills are installed globally via `make add-skills` (using `npx skills`):
 
-- [`commit`](https://github.com/mitsuhiko/agent-stuff/tree/main/skills/commit) - For creating git commits using concise Conventional Commits-style subjects.
-- [`gh-issue-sync`](https://github.com/mitsuhiko/gh-issue-sync) - For managing GitHub issues locally as Markdown files.
-- [`skill-creator`](https://github.com/anthropics/skills) - Guide for creating effective skills.
-- [`web-browser`](https://github.com/mitsuhiko/agent-stuff/tree/main/skills/web-browser) - For using Puppeteer in a Node environment to browse the web.
