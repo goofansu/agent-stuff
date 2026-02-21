@@ -229,6 +229,7 @@ async function runOracle(
   ];
 
   if (model) args.push("--model", model);
+  args.push("--thinking", "medium");
 
   let tmpDir: string | null = null;
   let tmpPath: string | null = null;

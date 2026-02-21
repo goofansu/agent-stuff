@@ -4,17 +4,16 @@ This repository stores customizations for the [pi coding agent](https://github.c
 
 ## Extensions
 
-All extension files are in the [`extensions`](extensions) directory:
+All extension files are in the [`extensions`](extensions) directory — both ones I wrote and ones sourced from others. That keeps everything in one place, easy to maintain.
 
-- [`librarian.ts`](extensions/librarian.ts) - Cross-repository code research subagent.
-- [`oracle.ts`](extensions/oracle.ts) - Second opinion subagent for complex analysis and debugging tasks.
-- [`snippets.ts`](extensions/snippets.ts) - Lists markdown code blocks from the last assistant message for selection.
+These are my extensions:
+- [`librarian.ts`](extensions/librarian.ts) - Searches code across GitHub repositories in a subagent.
+- [`oracle.ts`](extensions/oracle.ts) - Research with GPT 5.2 medium thinking level in a subagent.
+- [`snippets.ts`](extensions/snippets.ts) - Lists code blocks from the last assistant message for further action.
 
 ## Skills
 
 All skill files are in the [`skills`](skills) directory:
 
-- [`jira`](skills/jira) - For interacting with Atlassian Jira via `acli` (view, create, edit, transition issues, JQL search, etc.).
+- [`jira`](skills/jira) - For interacting with Atlassian Jira via `acli`.
 - [`note`](skills/note) - For creating and managing Denote notes in Emacs via `emacsclient`.
-
-
