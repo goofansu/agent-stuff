@@ -7,3 +7,4 @@ install:
 	curl -O https://raw.githubusercontent.com/mitsuhiko/agent-stuff/refs/heads/main/pi-extensions/session-breakdown.ts	
 	curl -O https://raw.githubusercontent.com/mitsuhiko/agent-stuff/refs/heads/main/pi-extensions/prompt-editor.ts
 	curl -O https://raw.githubusercontent.com/mitsuhiko/agent-stuff/refs/heads/main/pi-extensions/loop.ts
+	curl -O https://raw.githubusercontent.com/mitsuhiko/agent-stuff/refs/heads/main/pi-extensions/control.ts
