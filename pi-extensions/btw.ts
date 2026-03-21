@@ -922,31 +922,24 @@ export default function (pi: ExtensionAPI) {
 						"Start fresh",
 					]);
 					if (choice === "Continue previous conversation") {
-						// Dispose session so it's recreated with fresh main context + existing thread
+						// Dispose session so it's recreated with fresh main context on next submit
 						await disposeSideSession();
-						await ensureSideSession(ctx);
 						setOverlayStatus("Continuing BTW thread.");
 						await ensureOverlay(ctx);
-						notify(ctx, "Continuing BTW side thread with updated context.", "info");
 					} else if (choice === "Start fresh") {
 						await resetThread(ctx, true);
-						await ensureSideSession(ctx);
-						setOverlayStatus("Fresh BTW thread started.");
+						setOverlayStatus("Ready");
 						await ensureOverlay(ctx);
-						notify(ctx, "Started fresh BTW side thread.", "info");
 					}
 					// null = user cancelled (Esc), do nothing
 				} else {
 					await resetThread(ctx, true);
-					await ensureSideSession(ctx);
-					setOverlayStatus("Fresh BTW thread started.");
+					setOverlayStatus("Ready");
 					await ensureOverlay(ctx);
-					notify(ctx, "Started fresh BTW side thread.", "info");
 				}
 				return;
 			}
 
-			await ensureSideSession(ctx);
 			await ensureOverlay(ctx);
 			await runBtwPrompt(ctx, question);
 		},
